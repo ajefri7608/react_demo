@@ -14,7 +14,10 @@ export function LoginScreen() {
       <div>
         <button
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          onClick={() => {
+            console.log("aaaaa");
+            dispatch(increment());
+          }}
         >
           Increment
         </button>
