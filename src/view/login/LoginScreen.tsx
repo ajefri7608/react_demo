@@ -2,12 +2,12 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import styles from "./Counter.module.css";
-import { useAppSelector } from "../../redux/hook";
-import { increment } from "../../redux/slice/userSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hook";
+import { increment, login } from "../../redux/slice/userSlice";
 
 export function LoginScreen() {
   const count = useAppSelector((state) => state.user.value);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   return (
     <div>
@@ -16,7 +16,7 @@ export function LoginScreen() {
           aria-label="Increment value"
           onClick={() => {
             console.log("aaaaa");
-            dispatch(increment());
+            dispatch(login());
           }}
         >
           Increment
