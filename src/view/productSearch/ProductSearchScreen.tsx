@@ -16,26 +16,33 @@ export const ProductSearchScreen = () => {
 
   function renderProductRow() {
     const tmp = [];
-    for (var i = 0; i < productData.length; i += 2) {
+    for (var i = 0; i < productData.length; i += 3) {
       tmp.push(
         <Row>
           {productData[i] !== undefined ? (
-            <Col className="gridContainer">
+            <Col sm={3} md={3} lg={3} xl={3} xxl={3} className="gridContainer">
               {<ProductItem product={productData[i]} />}
             </Col>
           ) : (
             <></>
           )}
           {productData[i + 1] !== undefined ? (
-            <Col className="gridContainer">
-              {<ProductItem product={productData[i]} />}
+            <Col sm={3} md={3} lg={3} xl={3} xxl={3} className="gridContainer">
+              {<ProductItem product={productData[i + 1]} />}
             </Col>
           ) : (
             <></>
           )}
           {productData[i + 2] !== undefined ? (
-            <Col className="gridContainer">
-              {<ProductItem product={productData[i]} />}
+            <Col sm={3} md={3} lg={3} xl={3} xxl={3} className="gridContainer">
+              {<ProductItem product={productData[i + 2]} />}
+            </Col>
+          ) : (
+            <></>
+          )}
+          {productData[i + 3] !== undefined ? (
+            <Col sm={3} md={3} lg={3} xl={3} xxl={3} className="gridContainer">
+              {<ProductItem product={productData[i + 3]} />}
             </Col>
           ) : (
             <></>
