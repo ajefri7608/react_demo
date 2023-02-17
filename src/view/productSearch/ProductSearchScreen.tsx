@@ -1,3 +1,4 @@
+import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
