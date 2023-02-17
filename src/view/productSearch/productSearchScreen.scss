@@ -1,8 +1,14 @@
+@import "theme/colors.scss";
+
 .body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100vh;
-  flex-direction: column;
-  background-color: #f6f7f9;
+  height: 100%;
+
+  background-color: map-get($theme-colors, "backgroundColor");
+}
+.gridContainer {
+  display: flex;
+  justify-content: center;
 }

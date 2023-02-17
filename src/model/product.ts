@@ -13,8 +13,8 @@ export type ProductData = {
   productStatus?: string;
   numOfDoor?: any;
   fuelType?: any;
-  used?: any;
-  images?: Image[];
+  used?: string;
+  images: Image[];
 };
 export interface Image {
   id: string;

@@ -10,7 +10,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 54,
       name: "productVehicleTest",
-      price: 50,
+      price: 3500,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -22,21 +22,21 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "2021-01-31",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "brand new",
       images: [
         {
           id: "1",
-          filePath: "~/assets/product/car1.jpg",
+          filePath: "assets/product/car1.jpg",
           productId: "54",
         },
         {
           id: "3",
-          filePath: "~/assets/product/car2.jpg",
+          filePath: "assets/product/car2.jpg",
           productId: "55",
         },
         {
           id: "3",
-          filePath: "~/assets/product/car3.jpg",
+          filePath: "assets/product/car3.jpg",
           productId: "55",
         },
       ],
@@ -44,7 +44,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 55,
       name: "productVehicleTest",
-      price: 50,
+      price: 15000,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -56,11 +56,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "2021-01-31",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "gently used",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car2.jpg",
+          filePath: "assets/product/car2.jpg",
           productId: "55",
         },
       ],
@@ -68,7 +68,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 56,
       name: "productVehicleTest",
-      price: 50,
+      price: 12000,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -80,11 +80,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "brand new",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car3.jpg",
+          filePath: "assets/product/car3.jpg",
           productId: "55",
         },
       ],
@@ -92,7 +92,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 57,
       name: "productVehicleTest",
-      price: 50,
+      price: 11000,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -104,11 +104,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "gently used",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car1.jpg",
+          filePath: "assets/product/car1.jpg",
           productId: "55",
         },
       ],
@@ -116,7 +116,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 58,
       name: "productVehicleTest",
-      price: 50,
+      price: 8000,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -128,11 +128,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "gently used",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car2.jpg",
+          filePath: "assets/product/car2.jpg",
           productId: "55",
         },
       ],
@@ -140,7 +140,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 59,
       name: "productVehicleTest",
-      price: 50,
+      price: 9000,
       brand: "root",
       seatCount: 4,
       engineSize: 5000,
@@ -152,11 +152,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "brand new",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car3.jpg",
+          filePath: "assets/product/car3.jpg",
           productId: "55",
         },
       ],
@@ -164,7 +164,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     {
       id: 60,
       name: "producta",
-      price: 1000,
+      price: 5000,
       brand: "branda",
       seatCount: 4,
       engineSize: 5000,
@@ -176,11 +176,11 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: null,
+      used: "gently used",
       images: [
         {
           id: "3",
-          filePath: "~/assets/product/car1.jpg",
+          filePath: "assets/product/car1.jpg",
           productId: "55",
         },
       ],
