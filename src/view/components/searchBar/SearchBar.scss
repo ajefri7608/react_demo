@@ -1,0 +1,45 @@
+@import "theme/colors.scss";
+
+.searchBarTitle {
+  font-weight: 500;
+  font-size: 14px;
+  padding-bottom: 5px;
+  color: $grey_04;
+}
+
+.searchBarContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchBarGrp {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  box-shadow: 0px 10px 10px -5px rgba(216, 208, 208, 0.3);
+}
+
+.searchTextInput {
+  width: 300px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: $grey_04;
+}
+.searchTextInput::placeholder {
+  color: $grey_04;
+}
+
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
