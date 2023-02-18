@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ProductData } from "../../model/product";
 import { GeneralResponse } from "../../model/user";
-import { ProductItem } from "./component/ProductItem";
+
 import { fakeProductResponse } from "./fakeData";
 import "./productSearchScreen.scss";
+import { ProductSearchBar } from "./component/productSearchBar/ProductSearchBar";
+import { ProductItem } from "./component/productItem/ProductItem";
 
 export const ProductSearchScreen = () => {
   const [productData, setProductData] = useState<ProductData[]>([]);
@@ -59,5 +61,10 @@ export const ProductSearchScreen = () => {
       </AnimatePresence>
     );
   }
-  return <div className="body">{renderFakeProductData()}</div>;
+  return (
+    <div className="productSearchScreenContainer">
+      <ProductSearchBar />
+      {renderFakeProductData()}
+    </div>
+  );
 };

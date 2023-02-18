@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ProductData } from "../../../model/product";
+import { ProductData } from "../../../../model/product";
 import "./productItem.scss";
 import "theme/typography.scss";
 
@@ -17,7 +17,7 @@ export const ProductItem = (param: Param) => {
       {param.product.images?.length > 0 ? (
         <img
           className="productImage"
-          src={require("../../../" + param.product.images[0].filePath)}
+          src={require("../../../../" + param.product.images[0].filePath)}
           // src={require("assets/product/car1.jpg")}
         />
       ) : (

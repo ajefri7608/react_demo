@@ -7,7 +7,6 @@ import { increment, login } from "../../redux/slice/userSlice";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { ExampleComponent } from "../components/ExampleComponent";
 import { Button, Form } from "react-bootstrap";
 
 export function LoginScreen() {
@@ -28,7 +27,6 @@ export function LoginScreen() {
         </button>
         <span>{count}</span>
       </div> */}
-      <ExampleComponent />
     </div>
   );
 }
