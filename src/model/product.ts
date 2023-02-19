@@ -1,3 +1,14 @@
+import { SwitchBtn } from "view/components/switchBtn/SwitchBtn";
+export type ProductState = {
+  productData?: ProductData[];
+  filteredProductData?: ProductData[];
+};
+
+export type SearchPrductParam = {
+  text?: string;
+  switchBtn?: boolean;
+};
+
 export type ProductData = {
   id: number;
   name: string;
@@ -13,7 +24,7 @@ export type ProductData = {
   productStatus?: string;
   numOfDoor?: any;
   fuelType?: any;
-  used?: string;
+  used?: boolean;
   images: Image[];
 };
 export interface Image {

@@ -3,12 +3,11 @@ import "./SearchBar.scss";
 
 type Param = {
   textChangeCallBack: (text: string) => void;
-  currentText: string;
+  currentText?: string;
 };
 export const SearchBar = (param: Param) => {
   return (
     <div className="searchBarContainer">
-      <span className="searchBarTitle">Product Name:</span>
       <div className="searchBarGrp">
         <img src={require("assets/icon/search.png")} className="searchIcon" />
         <input

@@ -2,55 +2,67 @@ import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ProductData } from "../../model/product";
-import { GeneralResponse } from "../../model/user";
 
-import { fakeProductResponse } from "./fakeData";
 import "./productSearchScreen.scss";
 import { ProductSearchBar } from "./component/productSearchBar/ProductSearchBar";
 import { ProductItem } from "./component/productItem/ProductItem";
+import { useAppDispatch, useAppSelector } from "redux/hook";
+import { searchProduct } from "redux/slice/productSlice";
 
 export const ProductSearchScreen = () => {
-  const [productData, setProductData] = useState<ProductData[]>([]);
+  const dispatch = useAppDispatch();
+  const productData = useAppSelector(
+    (state) => state.product.filteredProductData
+  );
+
+  const [switchBtn, setSwitchBtn] = useState<boolean>();
+  const [text, setText] = useState<string>();
+
   useEffect(() => {
-    setProductData(fakeProductResponse.data);
-  }, []);
+    if (switchBtn !== undefined || text !== undefined) {
+      console.log("switch:", switchBtn);
+      console.log("text:", text);
+      dispatch(searchProduct({ text, switchBtn }));
+    }
+  }, [switchBtn, text]);
 
   function renderProductRow() {
     const tmp = [];
-    for (var i = 0; i < productData.length; i += 3) {
-      tmp.push(
-        <Row>
-          {productData[i] !== undefined ? (
-            <Col xs={12} md={6} lg={3}>
-              {<ProductItem product={productData[i]} />}
-            </Col>
-          ) : (
-            <></>
-          )}
-          {productData[i + 1] !== undefined ? (
-            <Col xs={12} md={6} lg={3}>
-              {<ProductItem product={productData[i + 1]} />}
-            </Col>
-          ) : (
-            <></>
-          )}
-          {productData[i + 2] !== undefined ? (
-            <Col xs={12} md={6} lg={3}>
-              {<ProductItem product={productData[i + 2]} />}
-            </Col>
-          ) : (
-            <></>
-          )}
-          {productData[i + 3] !== undefined ? (
-            <Col xs={12} md={6} lg={3} className="gridContainer">
-              {<ProductItem product={productData[i + 3]} />}
-            </Col>
-          ) : (
-            <></>
-          )}
-        </Row>
-      );
+    if (productData !== undefined) {
+      for (var i = 0; i < productData.length; i += 3) {
+        tmp.push(
+          <Row>
+            {productData[i] !== undefined ? (
+              <Col xs={12} md={6} lg={3}>
+                {<ProductItem product={productData[i]} />}
+              </Col>
+            ) : (
+              <></>
+            )}
+            {productData[i + 1] !== undefined ? (
+              <Col xs={12} md={6} lg={3}>
+                {<ProductItem product={productData[i + 1]} />}
+              </Col>
+            ) : (
+              <></>
+            )}
+            {productData[i + 2] !== undefined ? (
+              <Col xs={12} md={6} lg={3}>
+                {<ProductItem product={productData[i + 2]} />}
+              </Col>
+            ) : (
+              <></>
+            )}
+            {productData[i + 3] !== undefined ? (
+              <Col xs={12} md={6} lg={3} className="gridContainer">
+                {<ProductItem product={productData[i + 3]} />}
+              </Col>
+            ) : (
+              <></>
+            )}
+          </Row>
+        );
+      }
     }
     return tmp;
   }
@@ -63,7 +75,12 @@ export const ProductSearchScreen = () => {
   }
   return (
     <div className="productSearchScreenContainer">
-      <ProductSearchBar />
+      <ProductSearchBar
+        onSearchTextChanage={(text) => setText(text)}
+        onSwitchBtnPress={(state) => setSwitchBtn(state)}
+        searchText={text}
+        switchBtn={switchBtn}
+      />
       {renderFakeProductData()}
     </div>
   );

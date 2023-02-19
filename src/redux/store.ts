@@ -8,14 +8,16 @@ import storage from "redux-persist/lib/storage";
 import thunk from "redux-thunk";
 
 import userReducer from "../redux/slice/userSlice";
+import productReducer from "../redux/slice/productSlice";
 
 const rootReducer = combineReducers({
   user: userReducer,
+  product: productReducer,
 });
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["user"],
+  whitelist: ["user", "product"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

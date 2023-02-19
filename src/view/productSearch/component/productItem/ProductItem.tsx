@@ -40,7 +40,9 @@ export const ProductItem = (param: Param) => {
         <span className="font-03-bold ">
           {param.product.engineSize + " cc"}
         </span>
-        <span className="font-03-bold ">{param.product.used}</span>
+        <span className="font-03-bold ">
+          {param.product.used ? "brand new" : "gently use"}
+        </span>
       </div>
     </motion.div>
   );

@@ -4,7 +4,7 @@ import "./switchBtn.scss";
 
 type Param = {
   swichCallBack: (isOn: boolean) => void;
-  isOn: boolean;
+  isOn?: boolean;
 };
 export const SwitchBtn = (param: Param) => {
   return (

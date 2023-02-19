@@ -1,9 +1,9 @@
 @import "theme/colors.scss";
 
-.body {
+.productSearchScreenContainer {
   display: flex;
   flex-direction: column;
   flex: 1;
 
-  background-color: map-get($theme-colors, "backgroundColor");
+  // background-color: map-get($theme-colors, "backgroundColor");
 }

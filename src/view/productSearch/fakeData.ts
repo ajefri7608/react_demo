@@ -9,7 +9,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
   data: [
     {
       id: 54,
-      name: "productVehicleTest",
+      name: "car_b1",
       price: 3500,
       brand: "Ford",
       seatCount: 4,
@@ -22,7 +22,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "2021-01-31",
       numOfDoor: null,
       fuelType: null,
-      used: "brand new",
+      used: true,
       images: [
         {
           id: "1",
@@ -43,7 +43,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 55,
-      name: "productVehicleTest",
+      name: "car_c1",
       price: 15000,
       brand: "Honda",
       seatCount: 4,
@@ -56,7 +56,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "2021-01-31",
       numOfDoor: null,
       fuelType: null,
-      used: "gently used",
+      used: false,
       images: [
         {
           id: "3",
@@ -67,7 +67,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 56,
-      name: "productVehicleTest",
+      name: "car_a2",
       price: 12000,
       brand: "Toyota",
       seatCount: 4,
@@ -80,7 +80,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: "brand new",
+      used: true,
       images: [
         {
           id: "3",
@@ -91,7 +91,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 57,
-      name: "productVehicleTest",
+      name: "car_b2",
       price: 11000,
       brand: "Honda",
       seatCount: 4,
@@ -104,7 +104,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: "gently used",
+      used: false,
       images: [
         {
           id: "3",
@@ -115,7 +115,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 58,
-      name: "productVehicleTest",
+      name: "car_c2",
       price: 8000,
       brand: "Toyota",
       seatCount: 4,
@@ -128,7 +128,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: "gently used",
+      used: false,
       images: [
         {
           id: "3",
@@ -139,7 +139,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 59,
-      name: "productVehicleTest",
+      name: "car_a3",
       price: 9000,
       brand: "Honda",
       seatCount: 4,
@@ -152,7 +152,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: "brand new",
+      used: true,
       images: [
         {
           id: "3",
@@ -163,7 +163,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 60,
-      name: "producta",
+      name: "car_b3",
       price: 5000,
       brand: "Ford",
       seatCount: 4,
@@ -176,7 +176,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
       productStatus: "1661765193",
       numOfDoor: null,
       fuelType: null,
-      used: "gently used",
+      used: false,
       images: [
         {
           id: "3",
