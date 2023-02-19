@@ -68,7 +68,7 @@ export const ProductSearchScreen = () => {
   }
   function renderFakeProductData() {
     return (
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         <Container>{renderProductRow()}</Container>
       </AnimatePresence>
     );

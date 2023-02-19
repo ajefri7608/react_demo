@@ -1,5 +1,5 @@
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, usePresence } from "framer-motion";
 import { ProductData } from "../../../../model/product";
 import "./productItem.scss";
 import "theme/typography.scss";
@@ -9,10 +9,22 @@ type Param = { product: ProductData };
 export const ProductItem = (param: Param) => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       className="boxContainer"
+      // layout
+      initial={{ scale: 0.8, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      // exit={{
+      //   scale: 0.8,
+      //   opacity: 0,
+      //   transition: {
+      //     type: "spring",
+      //     bounce: 0,
+      //     duration: 0.3,
+      //   },
+      // }}
+
+      transition={{ type: "spring" }}
+      key={param.product.id}
     >
       {param.product.images?.length > 0 ? (
         <img

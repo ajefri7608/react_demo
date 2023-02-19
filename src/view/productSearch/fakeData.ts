@@ -9,7 +9,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
   data: [
     {
       id: 54,
-      name: "car_b1",
+      name: "car_x1",
       price: 3500,
       brand: "Ford",
       seatCount: 4,
@@ -43,7 +43,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 55,
-      name: "car_c1",
+      name: "car_y1",
       price: 15000,
       brand: "Honda",
       seatCount: 4,
@@ -67,7 +67,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 56,
-      name: "car_a2",
+      name: "car_z1",
       price: 12000,
       brand: "Toyota",
       seatCount: 4,
@@ -91,7 +91,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 57,
-      name: "car_b2",
+      name: "car_x2",
       price: 11000,
       brand: "Honda",
       seatCount: 4,
@@ -115,7 +115,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 58,
-      name: "car_c2",
+      name: "car_y2",
       price: 8000,
       brand: "Toyota",
       seatCount: 4,
@@ -139,7 +139,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 59,
-      name: "car_a3",
+      name: "car_z2",
       price: 9000,
       brand: "Honda",
       seatCount: 4,
@@ -163,7 +163,7 @@ export const fakeProductResponse: GeneralResponse<ProductData[]> = {
     },
     {
       id: 60,
-      name: "car_b3",
+      name: "car_x3",
       price: 5000,
       brand: "Ford",
       seatCount: 4,
