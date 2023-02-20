@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { DropDownList } from "view/components/dropDownList/DropDownList";
 import { SearchBar } from "view/components/searchBar/SearchBar";
 import { SwitchBtn } from "view/components/switchBtn/SwitchBtn";
 import "./productSearchBar.scss";
@@ -6,8 +7,12 @@ import "./productSearchBar.scss";
 type Param = {
   searchText?: string;
   switchBtn?: boolean;
+  dropDownList?: boolean;
+  dropDownListCurrentItem?: string;
   onSearchTextChanage: (text?: string) => void;
   onSwitchBtnPress: (switchBtnState: boolean) => void;
+  onDropDownListPress: (dropDownListState: boolean) => void;
+  onDropDownListSelected: (selectedItem?: string) => void;
 };
 
 export const ProductSearchBar = (param: Param) => {
@@ -29,6 +34,19 @@ export const ProductSearchBar = (param: Param) => {
             param.onSwitchBtnPress(isOn);
           }}
           isOn={param.switchBtn}
+        />
+      </div>
+      <div className="switchBtnContainer">
+        <span className="searchBarTitle">Brand</span>
+        <DropDownList
+          currentItem={param.dropDownListCurrentItem}
+          isOpen={param.dropDownList}
+          DropListOnPress={(state: boolean) => {
+            param.onDropDownListPress(state);
+          }}
+          DropListElementOnPress={(item?: string) => {
+            param.onDropDownListSelected(item);
+          }}
         />
       </div>
     </div>

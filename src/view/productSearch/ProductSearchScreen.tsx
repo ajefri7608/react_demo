@@ -17,14 +17,22 @@ export const ProductSearchScreen = () => {
 
   const [switchBtn, setSwitchBtn] = useState<boolean>();
   const [text, setText] = useState<string>();
+  const [dropDownList, setDropDownList] = useState<boolean>(false);
+  const [dropDownListSelectedItem, setDropDownListSelectedItem] =
+    useState<string>();
 
   useEffect(() => {
-    if (switchBtn !== undefined || text !== undefined) {
+    if (
+      switchBtn !== undefined ||
+      text !== undefined ||
+      dropDownListSelectedItem !== undefined
+    ) {
       console.log("switch:", switchBtn);
       console.log("text:", text);
-      dispatch(searchProduct({ text, switchBtn }));
+
+      dispatch(searchProduct({ text, switchBtn, dropDownListSelectedItem }));
     }
-  }, [switchBtn, text]);
+  }, [switchBtn, text, dropDownListSelectedItem]);
 
   function renderProductRow() {
     const tmp = [];
@@ -33,28 +41,28 @@ export const ProductSearchScreen = () => {
         tmp.push(
           <Row>
             {productData[i] !== undefined ? (
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={12} md={6} lg={6} xl={3} className="gridContainer">
                 {<ProductItem product={productData[i]} />}
               </Col>
             ) : (
               <></>
             )}
             {productData[i + 1] !== undefined ? (
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={12} md={6} lg={6} xl={3} className="gridContainer">
                 {<ProductItem product={productData[i + 1]} />}
               </Col>
             ) : (
               <></>
             )}
             {productData[i + 2] !== undefined ? (
-              <Col xs={12} md={6} lg={3}>
+              <Col xs={12} md={6} lg={6} xl={3} className="gridContainer">
                 {<ProductItem product={productData[i + 2]} />}
               </Col>
             ) : (
               <></>
             )}
             {productData[i + 3] !== undefined ? (
-              <Col xs={12} md={6} lg={3} className="gridContainer">
+              <Col xs={12} md={6} lg={6} xl={3} className="gridContainer">
                 {<ProductItem product={productData[i + 3]} />}
               </Col>
             ) : (
@@ -80,6 +88,15 @@ export const ProductSearchScreen = () => {
         onSwitchBtnPress={(state) => setSwitchBtn(state)}
         searchText={text}
         switchBtn={switchBtn}
+        dropDownList={dropDownList}
+        onDropDownListPress={(state) => {
+          setDropDownList(state);
+        }}
+        onDropDownListSelected={(item) => {
+          console.log("3", item);
+          setDropDownListSelectedItem(item);
+        }}
+        dropDownListCurrentItem={dropDownListSelectedItem}
       />
       {renderFakeProductData()}
     </div>

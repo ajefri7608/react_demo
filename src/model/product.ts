@@ -1,4 +1,3 @@
-import { SwitchBtn } from "view/components/switchBtn/SwitchBtn";
 export type ProductState = {
   productData?: ProductData[];
   filteredProductData?: ProductData[];
@@ -7,6 +6,7 @@ export type ProductState = {
 export type SearchPrductParam = {
   text?: string;
   switchBtn?: boolean;
+  dropDownListSelectedItem?: string;
 };
 
 export type ProductData = {

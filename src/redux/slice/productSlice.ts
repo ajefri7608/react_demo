@@ -17,7 +17,6 @@ export const productSlice = createSlice({
   initialState: initialState,
   reducers: {
     searchProduct: (state, action: PayloadAction<SearchPrductParam>) => {
-      state.filteredProductData = state.productData;
       if (state.productData !== undefined) {
         const tmp: ProductData[] = [];
         state.productData.map((item) => {
@@ -33,6 +32,14 @@ export const productSlice = createSlice({
           }
           if (action.payload.switchBtn !== undefined) {
             if (action.payload.switchBtn && item.used === false) {
+              isResult = false;
+            }
+          }
+          if (action.payload.dropDownListSelectedItem !== undefined) {
+            if (
+              action.payload.dropDownListSelectedItem !== item.brand &&
+              action.payload.dropDownListSelectedItem !== "All"
+            ) {
               isResult = false;
             }
           }

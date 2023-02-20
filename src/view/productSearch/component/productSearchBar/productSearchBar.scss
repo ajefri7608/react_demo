@@ -6,6 +6,15 @@
   justify-content: center;
   padding-top: 20px;
 }
+@media (max-width: 991.98px) {
+  .productSearchBarContainer {
+    flex-direction: column;
+  }
+  .switchBtnContainer {
+    margin-left: 0px !important;
+    margin-top: 10px;
+  }
+}
 .searchBarContainer {
   display: flex;
   flex-direction: column;
@@ -15,4 +24,8 @@
   flex-direction: column;
 
   margin-left: 20px;
+}
+.gridContainer {
+  display: flex;
+  justify-content: center;
 }
